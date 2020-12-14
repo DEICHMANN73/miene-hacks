@@ -1,0 +1,21 @@
+{
+  "name": "miene",
+  "version": "1.0.0",
+  "description": "Script Form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "miene",
+    "script",
+    "form"
+  ],
+  "author": "Torsten Wolter <tow.berlin@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bulma": "^0.9.1"
+  }
+}
