@@ -3,8 +3,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
-    <title>Miene | Hacks</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>SSL certificate (signed)</title>
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -18,47 +18,56 @@
     <div class="hero-body">
         <div class="container has-text-centered">
             <div class="column is-4 is-offset-4">
-                <h3 class="title has-text-black">Miene | Hacks</h3>
+                <h3 class="title has-text-black">signed SSL certificate generator</h3>
                 <hr/>
-                <p class="subtitle has-text-black">Bitte X, Y und Z angeben</p>
+                <!--<p class="subtitle has-text-black">Bitte X, Y und Z angeben</p>-->
                 <div class="box">
                     <figure class="avatar">
-                        <img src="./img/logo.jpg" alt="Logo">
+                        <img src="./img/ssl.jpg" alt="Logo">
                     </figure>
-                    <form>
+                    <form action="send.php">
                         <div class="field">
+                            <label class=label>FQDN</label>
                             <div class="control" id="control-1">
-                                <input class="input is-large" type="text" name="parameter" id="parameter-1"
-                                       placeholder="Parameter 1" autofocus="">
+                                <input class="input is-large" type="text" name="fqdn" id="parameter-1"
+                                       placeholder="sishfbpx001.corp.transmission-it.de" autofocus="">
                             </div>
                         </div>
                         <div class="field">
+                            <label class=label>IP-Address</label>
                             <div class="control" id="control-2">
-                                <input class="input is-large" type="text" name="parameter" id="parameter-2"
-                                       placeholder="Parameter 2">
+                                <input class="input is-large" type="text" name="ip" id="parameter-2"
+                                       placeholder="10.166.227.60">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class=label>random PFX-Container Key</label>
+                            <div class="control">
+                                <input class="input is-large" type="text" name="pfx-key" id="pfx-key">
                             </div>
                         </div>
                         <hr/>
                         <div id="additional-fields">
-                            <div class="field columns">
+                            <div class="field columns" data-id="1">
                                 <div class="column is-10">
+                                    <label class=label>SAN(s)</label>
                                     <div class="control" id="add-1">
-                                        <input class="input is-large" type="text" name="add" id="add-param-1"
+                                        <input class="input is-large" type="text" name="san[]" id="add-param-1"
                                                data-id="1" placeholder="Parameter 1">
                                     </div>
                                 </div>
                                 <div class="column is-2">
+                                    <label class="label">&nbsp;</label>
                                     <button class="button is-info is-large" id="add-btn" ><i class="fas fa-plus"></i></button>
                                 </div>
                             </div>
                         </div>
                         <hr/>
-                        <button class="button is-block is-success is-large is-fullwidth">Speichern&nbsp;<i
-                                class="far fa-save"></i></button>
+                        <button class="button is-block is-success is-large is-fullwidth">signieren&nbsp;<i class="fab fa-expeditedssl"></i></button>
                     </form>
                 </div>
                 <p class="has-text-grey">
-                    <a href="mailto:deinemudda@mienezuhause.de">E-Mail senden</a> &nbsp;·&nbsp;&copy; 2021
+                    Christian Miene <span id="code-year"></span>
                 </p>
             </div>
         </div>
